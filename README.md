@@ -131,7 +131,6 @@ Each word gets attributed according to OKM grammar from the paper:
 As described in the paper, translate non-English sentences to English first
 (e.g. using a translation library), then run through the pipeline.
 The OKM grammar is language-agnostic once the sentence is in English.
-<<<<<<< HEAD
-=======
+
 
 >>>>>>> 0ad3dbe19e844a6fc63224b9f20101de945e6f7e
