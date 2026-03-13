@@ -1,0 +1,81 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "word": "United",
+      "lemma": "United",
+      "pos": "PROPN",
+      "dep": "compound",
+      "node_type": 0,
+      "node_type_str": "NOUN",
+      "okm_notation": "United(3,1,6)",
+      "ambiguous": false,
+      "gender": 3,
+      "number": 1,
+      "case": 6,
+      "case_str": "GENITIVE",
+      "person": -1,
+      "tense": 0
+    },
+    {
+      "id": 1,
+      "word": "States",
+      "lemma": "States",
+      "pos": "PROPN",
+      "dep": "ROOT",
+      "node_type": 0,
+      "node_type_str": "NOUN",
+      "okm_notation": "States(3,1,2)",
+      "ambiguous": false,
+      "gender": 3,
+      "number": 1,
+      "case": 2,
+      "case_str": "OBJECTIVE",
+      "person": -1,
+      "tense": 0
+    },
+    {
+      "id": 3,
+      "word": "Xlibris",
+      "lemma": "Xlibris",
+      "pos": "PROPN",
+      "dep": "appos",
+      "node_type": 0,
+      "node_type_str": "NOUN",
+      "okm_notation": "Xlibris(3,1,6)",
+      "ambiguous": false,
+      "gender": 3,
+      "number": 1,
+      "case": 6,
+      "case_str": "GENITIVE",
+      "person": -1,
+      "tense": 0
+    }
+  ],
+  "edges": [
+    {
+      "source": 1,
+      "target": 0,
+      "dep": "compound",
+      "relation": "POSSESSES",
+      "case": 6,
+      "case_str": "GENITIVE",
+      "child_type": "NOUN",
+      "head_type": "NOUN"
+    },
+    {
+      "source": 1,
+      "target": 3,
+      "dep": "appos",
+      "relation": "POSSESSES",
+      "case": 6,
+      "case_str": "GENITIVE",
+      "child_type": "NOUN",
+      "head_type": "NOUN"
+    }
+  ],
+  "meta": {
+    "okm_version": "1.0",
+    "sentence": "United States : Xlibris ."
+  }
+}

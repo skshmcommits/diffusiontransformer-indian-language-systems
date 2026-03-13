@@ -1,0 +1,161 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "word": "Development",
+      "lemma": "development",
+      "pos": "NOUN",
+      "dep": "compound",
+      "node_type": 0,
+      "node_type_str": "NOUN",
+      "okm_notation": "Development(3,1,6)",
+      "ambiguous": false,
+      "gender": 3,
+      "number": 1,
+      "case": 6,
+      "case_str": "GENITIVE",
+      "person": -1,
+      "tense": 0
+    },
+    {
+      "id": 1,
+      "word": "work",
+      "lemma": "work",
+      "pos": "NOUN",
+      "dep": "nsubj",
+      "node_type": 0,
+      "node_type_str": "NOUN",
+      "okm_notation": "work(3,1,1)",
+      "ambiguous": false,
+      "gender": 3,
+      "number": 1,
+      "case": 1,
+      "case_str": "SUBJECTIVE",
+      "person": -1,
+      "tense": 0
+    },
+    {
+      "id": 2,
+      "word": "took",
+      "lemma": "take",
+      "pos": "VERB",
+      "dep": "ROOT",
+      "node_type": 1,
+      "node_type_str": "VERB",
+      "okm_notation": "took(3,1,-1)",
+      "ambiguous": false,
+      "person": 3,
+      "v_number": 1,
+      "tense": -1,
+      "tense_str": "PAST",
+      "gender": -1,
+      "number": -1,
+      "case": -1
+    },
+    {
+      "id": 3,
+      "word": "approximately",
+      "lemma": "approximately",
+      "pos": "ADV",
+      "dep": "advmod",
+      "node_type": 2,
+      "node_type_str": "DESCRIPTOR",
+      "okm_notation": "[d:approximately]",
+      "ambiguous": false,
+      "gender": -1,
+      "number": -1,
+      "case": -1,
+      "person": -1,
+      "tense": 0
+    },
+    {
+      "id": 4,
+      "word": "one",
+      "lemma": "one",
+      "pos": "NUM",
+      "dep": "nummod",
+      "node_type": 2,
+      "node_type_str": "DESCRIPTOR",
+      "okm_notation": "[d:one]",
+      "ambiguous": false,
+      "gender": -1,
+      "number": -1,
+      "case": -1,
+      "person": -1,
+      "tense": 0
+    },
+    {
+      "id": 5,
+      "word": "year",
+      "lemma": "year",
+      "pos": "NOUN",
+      "dep": "npadvmod",
+      "node_type": 0,
+      "node_type_str": "NOUN",
+      "okm_notation": "year(3,1,2)",
+      "ambiguous": false,
+      "gender": 3,
+      "number": 1,
+      "case": 2,
+      "case_str": "OBJECTIVE",
+      "person": -1,
+      "tense": 0
+    }
+  ],
+  "edges": [
+    {
+      "source": 1,
+      "target": 0,
+      "dep": "compound",
+      "relation": "POSSESSES",
+      "case": 6,
+      "case_str": "GENITIVE",
+      "child_type": "NOUN",
+      "head_type": "NOUN"
+    },
+    {
+      "source": 2,
+      "target": 1,
+      "dep": "nsubj",
+      "relation": "SUBJECT_OF",
+      "case": 1,
+      "case_str": "SUBJECTIVE",
+      "child_type": "NOUN",
+      "head_type": "VERB"
+    },
+    {
+      "source": 2,
+      "target": 5,
+      "dep": "npadvmod",
+      "relation": "OBJECT_OF",
+      "case": 2,
+      "case_str": "OBJECTIVE",
+      "child_type": "NOUN",
+      "head_type": "VERB"
+    },
+    {
+      "source": 4,
+      "target": 3,
+      "dep": "advmod",
+      "relation": "ADVMOD",
+      "case": -1,
+      "case_str": "NONE",
+      "child_type": "DESCRIPTOR",
+      "head_type": "DESCRIPTOR"
+    },
+    {
+      "source": 5,
+      "target": 4,
+      "dep": "nummod",
+      "relation": "NUMMOD",
+      "case": -1,
+      "case_str": "NONE",
+      "child_type": "DESCRIPTOR",
+      "head_type": "NOUN"
+    }
+  ],
+  "meta": {
+    "okm_version": "1.0",
+    "sentence": "Development work took approximately one year ."
+  }
+}

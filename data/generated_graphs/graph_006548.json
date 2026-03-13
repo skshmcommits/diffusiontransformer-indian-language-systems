@@ -1,0 +1,162 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "word": "Kaida",
+      "lemma": "Kaida",
+      "pos": "PROPN",
+      "dep": "ROOT",
+      "node_type": 0,
+      "node_type_str": "NOUN",
+      "okm_notation": "Kaida(3,1,2)",
+      "ambiguous": false,
+      "gender": 3,
+      "number": 1,
+      "case": 2,
+      "case_str": "OBJECTIVE",
+      "person": -1,
+      "tense": 0
+    },
+    {
+      "id": 4,
+      "word": "Naoshi",
+      "lemma": "Naoshi",
+      "pos": "PROPN",
+      "dep": "compound",
+      "node_type": 0,
+      "node_type_str": "NOUN",
+      "okm_notation": "Naoshi(3,1,6)",
+      "ambiguous": false,
+      "gender": 3,
+      "number": 1,
+      "case": 6,
+      "case_str": "GENITIVE",
+      "person": -1,
+      "tense": 0
+    },
+    {
+      "id": 5,
+      "word": "Mizuta",
+      "lemma": "Mizuta",
+      "pos": "PROPN",
+      "dep": "appos",
+      "node_type": 0,
+      "node_type_str": "NOUN",
+      "okm_notation": "Mizuta(3,1,6)",
+      "ambiguous": false,
+      "gender": 3,
+      "number": 1,
+      "case": 6,
+      "case_str": "GENITIVE",
+      "person": -1,
+      "tense": 0
+    },
+    {
+      "id": 7,
+      "word": "credited",
+      "lemma": "credit",
+      "pos": "VERB",
+      "dep": "parataxis",
+      "node_type": 1,
+      "node_type_str": "VERB",
+      "okm_notation": "credited(3,1,-1)",
+      "ambiguous": false,
+      "person": 3,
+      "v_number": 1,
+      "tense": -1,
+      "tense_str": "PAST",
+      "gender": -1,
+      "number": -1,
+      "case": -1
+    },
+    {
+      "id": 8,
+      "word": "as",
+      "lemma": "as",
+      "pos": "ADP",
+      "dep": "prep",
+      "node_type": 2,
+      "node_type_str": "DESCRIPTOR",
+      "okm_notation": "[d:as]",
+      "ambiguous": false,
+      "gender": -1,
+      "number": -1,
+      "case": -1,
+      "person": -1,
+      "tense": 0
+    },
+    {
+      "id": 10,
+      "word": "N.",
+      "lemma": "N.",
+      "pos": "PROPN",
+      "dep": "pobj",
+      "node_type": 0,
+      "node_type_str": "NOUN",
+      "okm_notation": "N.(3,1,2)",
+      "ambiguous": false,
+      "gender": 3,
+      "number": 1,
+      "case": 2,
+      "case_str": "OBJECTIVE",
+      "person": -1,
+      "tense": 0
+    }
+  ],
+  "edges": [
+    {
+      "source": 0,
+      "target": 5,
+      "dep": "appos",
+      "relation": "POSSESSES",
+      "case": 6,
+      "case_str": "GENITIVE",
+      "child_type": "NOUN",
+      "head_type": "NOUN"
+    },
+    {
+      "source": 5,
+      "target": 4,
+      "dep": "compound",
+      "relation": "POSSESSES",
+      "case": 6,
+      "case_str": "GENITIVE",
+      "child_type": "NOUN",
+      "head_type": "NOUN"
+    },
+    {
+      "source": 5,
+      "target": 7,
+      "dep": "parataxis",
+      "relation": "PARATAXIS",
+      "case": -1,
+      "case_str": "NONE",
+      "child_type": "VERB",
+      "head_type": "NOUN"
+    },
+    {
+      "source": 7,
+      "target": 8,
+      "dep": "prep",
+      "relation": "PREP",
+      "case": -1,
+      "case_str": "NONE",
+      "child_type": "DESCRIPTOR",
+      "head_type": "VERB"
+    },
+    {
+      "source": 8,
+      "target": 10,
+      "dep": "pobj",
+      "relation": "OBJECT_OF",
+      "case": 2,
+      "case_str": "OBJECTIVE",
+      "child_type": "NOUN",
+      "head_type": "DESCRIPTOR"
+    }
+  ],
+  "meta": {
+    "okm_version": "1.0",
+    "sentence": "Kaida \" ) , Naoshi Mizuta ( credited as \" N."
+  }
+}

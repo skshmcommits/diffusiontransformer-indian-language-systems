@@ -1,0 +1,160 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "word": "For",
+      "lemma": "for",
+      "pos": "ADP",
+      "dep": "ROOT",
+      "node_type": 2,
+      "node_type_str": "DESCRIPTOR",
+      "okm_notation": "[d:For]",
+      "ambiguous": false,
+      "gender": -1,
+      "number": -1,
+      "case": -1,
+      "person": -1,
+      "tense": 0
+    },
+    {
+      "id": 1,
+      "word": "laughing",
+      "lemma": "laugh",
+      "pos": "VERB",
+      "dep": "pcomp",
+      "node_type": 1,
+      "node_type_str": "VERB",
+      "okm_notation": "laughing(3,1,999)",
+      "ambiguous": false,
+      "person": 3,
+      "v_number": 1,
+      "tense": 0,
+      "tense_str": "PRESENT",
+      "gender": -1,
+      "number": -1,
+      "case": -1
+    },
+    {
+      "id": 2,
+      "word": "at",
+      "lemma": "at",
+      "pos": "ADP",
+      "dep": "prep",
+      "node_type": 2,
+      "node_type_str": "DESCRIPTOR",
+      "okm_notation": "[d:at]",
+      "ambiguous": false,
+      "gender": -1,
+      "number": -1,
+      "case": -1,
+      "person": -1,
+      "tense": 0
+    },
+    {
+      "id": 3,
+      "word": "Jack",
+      "lemma": "Jack",
+      "pos": "PROPN",
+      "dep": "poss",
+      "node_type": 0,
+      "node_type_str": "NOUN",
+      "okm_notation": "Jack(3,1,6)",
+      "ambiguous": false,
+      "gender": 3,
+      "number": 1,
+      "case": 6,
+      "case_str": "GENITIVE",
+      "person": -1,
+      "tense": 0
+    },
+    {
+      "id": 4,
+      "word": "'s",
+      "lemma": "'s",
+      "pos": "PART",
+      "dep": "case",
+      "node_type": 2,
+      "node_type_str": "DESCRIPTOR",
+      "okm_notation": "[d:'s]",
+      "ambiguous": false,
+      "gender": -1,
+      "number": -1,
+      "case": -1,
+      "person": -1,
+      "tense": 0
+    },
+    {
+      "id": 5,
+      "word": "disaster",
+      "lemma": "disaster",
+      "pos": "NOUN",
+      "dep": "pobj",
+      "node_type": 0,
+      "node_type_str": "NOUN",
+      "okm_notation": "disaster(3,1,7)",
+      "ambiguous": false,
+      "gender": 3,
+      "number": 1,
+      "case": 7,
+      "case_str": "LOCATIVE",
+      "person": -1,
+      "tense": 0
+    }
+  ],
+  "edges": [
+    {
+      "source": 0,
+      "target": 1,
+      "dep": "pcomp",
+      "relation": "PCOMP",
+      "case": -1,
+      "case_str": "NONE",
+      "child_type": "VERB",
+      "head_type": "DESCRIPTOR"
+    },
+    {
+      "source": 1,
+      "target": 2,
+      "dep": "prep",
+      "relation": "PREP",
+      "case": -1,
+      "case_str": "NONE",
+      "child_type": "DESCRIPTOR",
+      "head_type": "VERB"
+    },
+    {
+      "source": 2,
+      "target": 5,
+      "dep": "pobj",
+      "relation": "LOCATED_AT",
+      "case": 7,
+      "case_str": "LOCATIVE",
+      "child_type": "NOUN",
+      "head_type": "DESCRIPTOR"
+    },
+    {
+      "source": 3,
+      "target": 4,
+      "dep": "case",
+      "relation": "CASE",
+      "case": -1,
+      "case_str": "NONE",
+      "child_type": "DESCRIPTOR",
+      "head_type": "NOUN"
+    },
+    {
+      "source": 5,
+      "target": 3,
+      "dep": "poss",
+      "relation": "POSSESSES",
+      "case": 6,
+      "case_str": "GENITIVE",
+      "child_type": "NOUN",
+      "head_type": "NOUN"
+    }
+  ],
+  "meta": {
+    "okm_version": "1.0",
+    "sentence": "For laughing at Jack 's disaster ."
+  }
+}

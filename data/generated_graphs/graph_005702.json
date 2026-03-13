@@ -1,0 +1,163 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "word": "It",
+      "lemma": "it",
+      "pos": "PRON",
+      "dep": "nsubj",
+      "node_type": 0,
+      "node_type_str": "NOUN",
+      "okm_notation": "It(3,1,1)",
+      "ambiguous": false,
+      "gender": 3,
+      "number": 1,
+      "case": 1,
+      "case_str": "SUBJECTIVE",
+      "person": -1,
+      "tense": 0
+    },
+    {
+      "id": 1,
+      "word": "couldn",
+      "lemma": "couldn",
+      "pos": "PROPN",
+      "dep": "appos",
+      "node_type": 0,
+      "node_type_str": "NOUN",
+      "okm_notation": "couldn(3,1,6)",
+      "ambiguous": false,
+      "gender": 3,
+      "number": 1,
+      "case": 6,
+      "case_str": "GENITIVE",
+      "person": -1,
+      "tense": 0
+    },
+    {
+      "id": 2,
+      "word": "'",
+      "lemma": "'",
+      "pos": "PROPN",
+      "dep": "punct",
+      "node_type": 0,
+      "node_type_str": "NOUN",
+      "okm_notation": "'(3,1,2)",
+      "ambiguous": false,
+      "gender": 3,
+      "number": 1,
+      "case": 2,
+      "case_str": "OBJECTIVE",
+      "person": -1,
+      "tense": 0
+    },
+    {
+      "id": 3,
+      "word": "t",
+      "lemma": "t",
+      "pos": "NOUN",
+      "dep": "appos",
+      "node_type": 0,
+      "node_type_str": "NOUN",
+      "okm_notation": "t(3,1,6)",
+      "ambiguous": false,
+      "gender": 3,
+      "number": 1,
+      "case": 6,
+      "case_str": "GENITIVE",
+      "person": -1,
+      "tense": 0
+    },
+    {
+      "id": 4,
+      "word": "happen",
+      "lemma": "happen",
+      "pos": "VERB",
+      "dep": "ROOT",
+      "node_type": 1,
+      "node_type_str": "VERB",
+      "okm_notation": "happen(3,1,999)",
+      "ambiguous": false,
+      "person": 3,
+      "v_number": 1,
+      "tense": 0,
+      "tense_str": "PRESENT",
+      "gender": -1,
+      "number": -1,
+      "case": -1
+    },
+    {
+      "id": 5,
+      "word": "today",
+      "lemma": "today",
+      "pos": "NOUN",
+      "dep": "npadvmod",
+      "node_type": 0,
+      "node_type_str": "NOUN",
+      "okm_notation": "today(3,1,2)",
+      "ambiguous": false,
+      "gender": 3,
+      "number": 1,
+      "case": 2,
+      "case_str": "OBJECTIVE",
+      "person": -1,
+      "tense": 0
+    }
+  ],
+  "edges": [
+    {
+      "source": 0,
+      "target": 1,
+      "dep": "appos",
+      "relation": "POSSESSES",
+      "case": 6,
+      "case_str": "GENITIVE",
+      "child_type": "NOUN",
+      "head_type": "NOUN"
+    },
+    {
+      "source": 0,
+      "target": 3,
+      "dep": "appos",
+      "relation": "POSSESSES",
+      "case": 6,
+      "case_str": "GENITIVE",
+      "child_type": "NOUN",
+      "head_type": "NOUN"
+    },
+    {
+      "source": 1,
+      "target": 2,
+      "dep": "punct",
+      "relation": "OBJECT_OF",
+      "case": 2,
+      "case_str": "OBJECTIVE",
+      "child_type": "NOUN",
+      "head_type": "NOUN"
+    },
+    {
+      "source": 4,
+      "target": 0,
+      "dep": "nsubj",
+      "relation": "SUBJECT_OF",
+      "case": 1,
+      "case_str": "SUBJECTIVE",
+      "child_type": "NOUN",
+      "head_type": "VERB"
+    },
+    {
+      "source": 4,
+      "target": 5,
+      "dep": "npadvmod",
+      "relation": "OBJECT_OF",
+      "case": 2,
+      "case_str": "OBJECTIVE",
+      "child_type": "NOUN",
+      "head_type": "VERB"
+    }
+  ],
+  "meta": {
+    "okm_version": "1.0",
+    "sentence": "It couldn 't happen today ."
+  }
+}

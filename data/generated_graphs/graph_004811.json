@@ -1,0 +1,159 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "word": "Nc3",
+      "lemma": "nc3",
+      "pos": "ADV",
+      "dep": "advmod",
+      "node_type": 2,
+      "node_type_str": "DESCRIPTOR",
+      "okm_notation": "[d:Nc3]",
+      "ambiguous": false,
+      "gender": -1,
+      "number": -1,
+      "case": -1,
+      "person": -1,
+      "tense": 0
+    },
+    {
+      "id": 1,
+      "word": "Nc6",
+      "lemma": "Nc6",
+      "pos": "PROPN",
+      "dep": "npadvmod",
+      "node_type": 0,
+      "node_type_str": "NOUN",
+      "okm_notation": "Nc6(3,1,2)",
+      "ambiguous": false,
+      "gender": 3,
+      "number": 1,
+      "case": 2,
+      "case_str": "OBJECTIVE",
+      "person": -1,
+      "tense": 0
+    },
+    {
+      "id": 2,
+      "word": "5",
+      "lemma": "5",
+      "pos": "NUM",
+      "dep": "nummod",
+      "node_type": 2,
+      "node_type_str": "DESCRIPTOR",
+      "okm_notation": "[d:5]",
+      "ambiguous": false,
+      "gender": -1,
+      "number": -1,
+      "case": -1,
+      "person": -1,
+      "tense": 0
+    },
+    {
+      "id": 5,
+      "word": "a3",
+      "lemma": "a3",
+      "pos": "NOUN",
+      "dep": "appos",
+      "node_type": 0,
+      "node_type_str": "NOUN",
+      "okm_notation": "a3(3,1,6)",
+      "ambiguous": false,
+      "gender": 3,
+      "number": 1,
+      "case": 6,
+      "case_str": "GENITIVE",
+      "person": -1,
+      "tense": 0
+    },
+    {
+      "id": 6,
+      "word": "a6",
+      "lemma": "a6",
+      "pos": "PROPN",
+      "dep": "ROOT",
+      "node_type": 0,
+      "node_type_str": "NOUN",
+      "okm_notation": "a6(3,1,2)",
+      "ambiguous": false,
+      "gender": 3,
+      "number": 1,
+      "case": 2,
+      "case_str": "OBJECTIVE",
+      "person": -1,
+      "tense": 0
+    },
+    {
+      "id": 7,
+      "word": "6",
+      "lemma": "6",
+      "pos": "NUM",
+      "dep": "pobj",
+      "node_type": 2,
+      "node_type_str": "DESCRIPTOR",
+      "okm_notation": "[d:6]",
+      "ambiguous": false,
+      "gender": -1,
+      "number": -1,
+      "case": -1,
+      "person": -1,
+      "tense": 0
+    }
+  ],
+  "edges": [
+    {
+      "source": 1,
+      "target": 5,
+      "dep": "appos",
+      "relation": "POSSESSES",
+      "case": 6,
+      "case_str": "GENITIVE",
+      "child_type": "NOUN",
+      "head_type": "NOUN"
+    },
+    {
+      "source": 5,
+      "target": 2,
+      "dep": "nummod",
+      "relation": "NUMMOD",
+      "case": -1,
+      "case_str": "NONE",
+      "child_type": "DESCRIPTOR",
+      "head_type": "NOUN"
+    },
+    {
+      "source": 6,
+      "target": 0,
+      "dep": "advmod",
+      "relation": "ADVMOD",
+      "case": -1,
+      "case_str": "NONE",
+      "child_type": "DESCRIPTOR",
+      "head_type": "NOUN"
+    },
+    {
+      "source": 6,
+      "target": 1,
+      "dep": "npadvmod",
+      "relation": "OBJECT_OF",
+      "case": 2,
+      "case_str": "OBJECTIVE",
+      "child_type": "NOUN",
+      "head_type": "NOUN"
+    },
+    {
+      "source": 6,
+      "target": 7,
+      "dep": "pobj",
+      "relation": "POBJ",
+      "case": -1,
+      "case_str": "NONE",
+      "child_type": "DESCRIPTOR",
+      "head_type": "NOUN"
+    }
+  ],
+  "meta": {
+    "okm_version": "1.0",
+    "sentence": "Nc3 Nc6 5 @.@  a3 a6 6 ."
+  }
+}

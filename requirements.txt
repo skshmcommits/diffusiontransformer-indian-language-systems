@@ -1,0 +1,22 @@
+# OKM Pipeline Requirements
+# Install with: pip install -r requirements.txt
+
+# ── Core NLP ──────────────────────────────────────────────────────────────────
+spacy>=3.7.0                    # Stage 1: linguistic preprocessing
+# After installing spaCy, download a model:
+#   python -m spacy download en_core_web_sm   (small, fast)
+#   python -m spacy download en_core_web_md   (medium, better)
+#   python -m spacy download en_core_web_lg   (large, best rule-based)
+#   python -m spacy download en_core_web_trf  (transformer, most accurate)
+
+# ── Deep Learning ─────────────────────────────────────────────────────────────
+torch>=2.0.0                    # Core ML framework
+transformers>=4.35.0            # BERT for Stage 3 ambiguity resolver
+sentence-transformers>=2.2.0    # Sentence encoder for diffusion conditioning
+
+# ── Graph Processing ──────────────────────────────────────────────────────────
+networkx>=3.0                   # OKM graph representation
+
+# ── Data & Utilities ──────────────────────────────────────────────────────────
+numpy>=1.24.0
+tqdm>=4.65.0                    # Progress bars

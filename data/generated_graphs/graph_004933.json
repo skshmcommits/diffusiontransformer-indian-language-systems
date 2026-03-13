@@ -1,0 +1,160 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "word": "Peddie",
+      "lemma": "Peddie",
+      "pos": "PROPN",
+      "dep": "compound",
+      "node_type": 0,
+      "node_type_str": "NOUN",
+      "okm_notation": "Peddie(3,1,6)",
+      "ambiguous": false,
+      "gender": 3,
+      "number": 1,
+      "case": 6,
+      "case_str": "GENITIVE",
+      "person": -1,
+      "tense": 0
+    },
+    {
+      "id": 1,
+      "word": "Memorial",
+      "lemma": "Memorial",
+      "pos": "PROPN",
+      "dep": "compound",
+      "node_type": 0,
+      "node_type_str": "NOUN",
+      "okm_notation": "Memorial(3,1,6)",
+      "ambiguous": false,
+      "gender": 3,
+      "number": 1,
+      "case": 6,
+      "case_str": "GENITIVE",
+      "person": -1,
+      "tense": 0
+    },
+    {
+      "id": 2,
+      "word": "Park",
+      "lemma": "Park",
+      "pos": "PROPN",
+      "dep": "ROOT",
+      "node_type": 0,
+      "node_type_str": "NOUN",
+      "okm_notation": "Park(3,1,2)",
+      "ambiguous": true,
+      "gender": 3,
+      "number": 1,
+      "case": 2,
+      "case_str": "OBJECTIVE",
+      "person": -1,
+      "tense": 0
+    },
+    {
+      "id": 3,
+      "word": "along",
+      "lemma": "along",
+      "pos": "ADP",
+      "dep": "prep",
+      "node_type": 2,
+      "node_type_str": "DESCRIPTOR",
+      "okm_notation": "[d:along]",
+      "ambiguous": false,
+      "gender": -1,
+      "number": -1,
+      "case": -1,
+      "person": -1,
+      "tense": 0
+    },
+    {
+      "id": 4,
+      "word": "Route",
+      "lemma": "Route",
+      "pos": "PROPN",
+      "dep": "pobj",
+      "node_type": 0,
+      "node_type_str": "NOUN",
+      "okm_notation": "Route(3,1,2)",
+      "ambiguous": false,
+      "gender": 3,
+      "number": 1,
+      "case": 2,
+      "case_str": "OBJECTIVE",
+      "person": -1,
+      "tense": 0
+    },
+    {
+      "id": 5,
+      "word": "120",
+      "lemma": "120",
+      "pos": "NUM",
+      "dep": "nummod",
+      "node_type": 2,
+      "node_type_str": "DESCRIPTOR",
+      "okm_notation": "[d:120]",
+      "ambiguous": false,
+      "gender": -1,
+      "number": -1,
+      "case": -1,
+      "person": -1,
+      "tense": 0
+    }
+  ],
+  "edges": [
+    {
+      "source": 2,
+      "target": 0,
+      "dep": "compound",
+      "relation": "POSSESSES",
+      "case": 6,
+      "case_str": "GENITIVE",
+      "child_type": "NOUN",
+      "head_type": "NOUN"
+    },
+    {
+      "source": 2,
+      "target": 1,
+      "dep": "compound",
+      "relation": "POSSESSES",
+      "case": 6,
+      "case_str": "GENITIVE",
+      "child_type": "NOUN",
+      "head_type": "NOUN"
+    },
+    {
+      "source": 2,
+      "target": 3,
+      "dep": "prep",
+      "relation": "PREP",
+      "case": -1,
+      "case_str": "NONE",
+      "child_type": "DESCRIPTOR",
+      "head_type": "NOUN"
+    },
+    {
+      "source": 3,
+      "target": 4,
+      "dep": "pobj",
+      "relation": "OBJECT_OF",
+      "case": 2,
+      "case_str": "OBJECTIVE",
+      "child_type": "NOUN",
+      "head_type": "DESCRIPTOR"
+    },
+    {
+      "source": 4,
+      "target": 5,
+      "dep": "nummod",
+      "relation": "NUMMOD",
+      "case": -1,
+      "case_str": "NONE",
+      "child_type": "DESCRIPTOR",
+      "head_type": "NOUN"
+    }
+  ],
+  "meta": {
+    "okm_version": "1.0",
+    "sentence": "Peddie Memorial Park along Route 120 ."
+  }
+}

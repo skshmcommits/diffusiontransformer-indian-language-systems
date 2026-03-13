@@ -1,0 +1,158 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "word": "During",
+      "lemma": "during",
+      "pos": "ADP",
+      "dep": "ROOT",
+      "node_type": 2,
+      "node_type_str": "DESCRIPTOR",
+      "okm_notation": "[d:During]",
+      "ambiguous": false,
+      "gender": -1,
+      "number": -1,
+      "case": -1,
+      "person": -1,
+      "tense": 0
+    },
+    {
+      "id": 1,
+      "word": "a",
+      "lemma": "a",
+      "pos": "DET",
+      "dep": "det",
+      "node_type": 2,
+      "node_type_str": "DESCRIPTOR",
+      "okm_notation": "[d:a]",
+      "ambiguous": false,
+      "gender": -1,
+      "number": -1,
+      "case": -1,
+      "person": -1,
+      "tense": 0
+    },
+    {
+      "id": 2,
+      "word": "debate",
+      "lemma": "debate",
+      "pos": "NOUN",
+      "dep": "pobj",
+      "node_type": 0,
+      "node_type_str": "NOUN",
+      "okm_notation": "debate(3,1,7)",
+      "ambiguous": false,
+      "gender": 3,
+      "number": 1,
+      "case": 7,
+      "case_str": "LOCATIVE",
+      "person": -1,
+      "tense": 0
+    },
+    {
+      "id": 3,
+      "word": "on",
+      "lemma": "on",
+      "pos": "ADP",
+      "dep": "prep",
+      "node_type": 2,
+      "node_type_str": "DESCRIPTOR",
+      "okm_notation": "[d:on]",
+      "ambiguous": false,
+      "gender": -1,
+      "number": -1,
+      "case": -1,
+      "person": -1,
+      "tense": 0
+    },
+    {
+      "id": 4,
+      "word": "Democracy",
+      "lemma": "Democracy",
+      "pos": "PROPN",
+      "dep": "pobj",
+      "node_type": 0,
+      "node_type_str": "NOUN",
+      "okm_notation": "Democracy(3,1,7)",
+      "ambiguous": false,
+      "gender": 3,
+      "number": 1,
+      "case": 7,
+      "case_str": "LOCATIVE",
+      "person": -1,
+      "tense": 0
+    },
+    {
+      "id": 5,
+      "word": "Now",
+      "lemma": "now",
+      "pos": "ADV",
+      "dep": "advmod",
+      "node_type": 2,
+      "node_type_str": "DESCRIPTOR",
+      "okm_notation": "[d:Now]",
+      "ambiguous": false,
+      "gender": -1,
+      "number": -1,
+      "case": -1,
+      "person": -1,
+      "tense": 0
+    }
+  ],
+  "edges": [
+    {
+      "source": 0,
+      "target": 2,
+      "dep": "pobj",
+      "relation": "LOCATED_AT",
+      "case": 7,
+      "case_str": "LOCATIVE",
+      "child_type": "NOUN",
+      "head_type": "DESCRIPTOR"
+    },
+    {
+      "source": 0,
+      "target": 5,
+      "dep": "advmod",
+      "relation": "ADVMOD",
+      "case": -1,
+      "case_str": "NONE",
+      "child_type": "DESCRIPTOR",
+      "head_type": "DESCRIPTOR"
+    },
+    {
+      "source": 2,
+      "target": 1,
+      "dep": "det",
+      "relation": "DET",
+      "case": -1,
+      "case_str": "NONE",
+      "child_type": "DESCRIPTOR",
+      "head_type": "NOUN"
+    },
+    {
+      "source": 2,
+      "target": 3,
+      "dep": "prep",
+      "relation": "PREP",
+      "case": -1,
+      "case_str": "NONE",
+      "child_type": "DESCRIPTOR",
+      "head_type": "NOUN"
+    },
+    {
+      "source": 3,
+      "target": 4,
+      "dep": "pobj",
+      "relation": "LOCATED_AT",
+      "case": 7,
+      "case_str": "LOCATIVE",
+      "child_type": "NOUN",
+      "head_type": "DESCRIPTOR"
+    }
+  ],
+  "meta": {
+    "okm_version": "1.0",
+    "sentence": "During a debate on Democracy Now !"
+  }
+}

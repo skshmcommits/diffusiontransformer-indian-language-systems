@@ -1,0 +1,131 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "word": "The",
+      "lemma": "the",
+      "pos": "DET",
+      "dep": "det",
+      "node_type": 2,
+      "node_type_str": "DESCRIPTOR",
+      "okm_notation": "[d:The]",
+      "ambiguous": false,
+      "gender": -1,
+      "number": -1,
+      "case": -1,
+      "person": -1,
+      "tense": 0
+    },
+    {
+      "id": 1,
+      "word": "development",
+      "lemma": "development",
+      "pos": "NOUN",
+      "dep": "ROOT",
+      "node_type": 0,
+      "node_type_str": "NOUN",
+      "okm_notation": "development(3,1,2)",
+      "ambiguous": false,
+      "gender": 3,
+      "number": 1,
+      "case": 2,
+      "case_str": "OBJECTIVE",
+      "person": -1,
+      "tense": 0
+    },
+    {
+      "id": 2,
+      "word": "of",
+      "lemma": "of",
+      "pos": "ADP",
+      "dep": "prep",
+      "node_type": 2,
+      "node_type_str": "DESCRIPTOR",
+      "okm_notation": "[d:of]",
+      "ambiguous": false,
+      "gender": -1,
+      "number": -1,
+      "case": -1,
+      "person": -1,
+      "tense": 0
+    },
+    {
+      "id": 3,
+      "word": "an",
+      "lemma": "an",
+      "pos": "DET",
+      "dep": "det",
+      "node_type": 2,
+      "node_type_str": "DESCRIPTOR",
+      "okm_notation": "[d:an]",
+      "ambiguous": false,
+      "gender": -1,
+      "number": -1,
+      "case": -1,
+      "person": -1,
+      "tense": 0
+    },
+    {
+      "id": 4,
+      "word": "enantioselective",
+      "lemma": "enantioselective",
+      "pos": "ADJ",
+      "dep": "pobj",
+      "node_type": 2,
+      "node_type_str": "DESCRIPTOR",
+      "okm_notation": "[d:enantioselective]",
+      "ambiguous": false,
+      "gender": -1,
+      "number": -1,
+      "case": -1,
+      "person": -1,
+      "tense": 0
+    }
+  ],
+  "edges": [
+    {
+      "source": 1,
+      "target": 0,
+      "dep": "det",
+      "relation": "DET",
+      "case": -1,
+      "case_str": "NONE",
+      "child_type": "DESCRIPTOR",
+      "head_type": "NOUN"
+    },
+    {
+      "source": 1,
+      "target": 2,
+      "dep": "prep",
+      "relation": "PREP",
+      "case": -1,
+      "case_str": "NONE",
+      "child_type": "DESCRIPTOR",
+      "head_type": "NOUN"
+    },
+    {
+      "source": 2,
+      "target": 4,
+      "dep": "pobj",
+      "relation": "POBJ",
+      "case": -1,
+      "case_str": "NONE",
+      "child_type": "DESCRIPTOR",
+      "head_type": "DESCRIPTOR"
+    },
+    {
+      "source": 4,
+      "target": 3,
+      "dep": "det",
+      "relation": "DET",
+      "case": -1,
+      "case_str": "NONE",
+      "child_type": "DESCRIPTOR",
+      "head_type": "DESCRIPTOR"
+    }
+  ],
+  "meta": {
+    "okm_version": "1.0",
+    "sentence": "The development of an enantioselective ( i.e."
+  }
+}

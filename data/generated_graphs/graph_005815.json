@@ -1,0 +1,109 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "word": "Its",
+      "lemma": "its",
+      "pos": "PRON",
+      "dep": "poss",
+      "node_type": 0,
+      "node_type_str": "NOUN",
+      "okm_notation": "Its(3,1,6)",
+      "ambiguous": false,
+      "gender": 3,
+      "number": 1,
+      "case": 6,
+      "case_str": "GENITIVE",
+      "person": -1,
+      "tense": 0
+    },
+    {
+      "id": 1,
+      "word": "capital",
+      "lemma": "capital",
+      "pos": "NOUN",
+      "dep": "nsubj",
+      "node_type": 0,
+      "node_type_str": "NOUN",
+      "okm_notation": "capital(3,1,1)",
+      "ambiguous": false,
+      "gender": 3,
+      "number": 1,
+      "case": 1,
+      "case_str": "SUBJECTIVE",
+      "person": -1,
+      "tense": 0
+    },
+    {
+      "id": 2,
+      "word": "is",
+      "lemma": "be",
+      "pos": "AUX",
+      "dep": "ROOT",
+      "node_type": 1,
+      "node_type_str": "VERB",
+      "okm_notation": "is(3,1,999)",
+      "ambiguous": false,
+      "person": 3,
+      "v_number": 1,
+      "tense": 0,
+      "tense_str": "PRESENT",
+      "gender": -1,
+      "number": -1,
+      "case": -1
+    },
+    {
+      "id": 3,
+      "word": "Dublin",
+      "lemma": "Dublin",
+      "pos": "PROPN",
+      "dep": "attr",
+      "node_type": 0,
+      "node_type_str": "NOUN",
+      "okm_notation": "Dublin(3,1,2)",
+      "ambiguous": false,
+      "gender": 3,
+      "number": 1,
+      "case": 2,
+      "case_str": "OBJECTIVE",
+      "person": -1,
+      "tense": 0
+    }
+  ],
+  "edges": [
+    {
+      "source": 1,
+      "target": 0,
+      "dep": "poss",
+      "relation": "POSSESSES",
+      "case": 6,
+      "case_str": "GENITIVE",
+      "child_type": "NOUN",
+      "head_type": "NOUN"
+    },
+    {
+      "source": 2,
+      "target": 1,
+      "dep": "nsubj",
+      "relation": "SUBJECT_OF",
+      "case": 1,
+      "case_str": "SUBJECTIVE",
+      "child_type": "NOUN",
+      "head_type": "VERB"
+    },
+    {
+      "source": 2,
+      "target": 3,
+      "dep": "attr",
+      "relation": "OBJECT_OF",
+      "case": 2,
+      "case_str": "OBJECTIVE",
+      "child_type": "NOUN",
+      "head_type": "VERB"
+    }
+  ],
+  "meta": {
+    "okm_version": "1.0",
+    "sentence": "Its capital is Dublin ."
+  }
+}

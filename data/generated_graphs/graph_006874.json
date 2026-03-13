@@ -1,0 +1,161 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "word": "Panzergrenadier",
+      "lemma": "Panzergrenadier",
+      "pos": "PROPN",
+      "dep": "nmod",
+      "node_type": 0,
+      "node_type_str": "NOUN",
+      "okm_notation": "Panzergrenadier(3,1,6)",
+      "ambiguous": false,
+      "gender": 3,
+      "number": 1,
+      "case": 6,
+      "case_str": "GENITIVE",
+      "person": -1,
+      "tense": 0
+    },
+    {
+      "id": 1,
+      "word": "_",
+      "lemma": "_",
+      "pos": "NOUN",
+      "dep": "punct",
+      "node_type": 0,
+      "node_type_str": "NOUN",
+      "okm_notation": "_(3,1,2)",
+      "ambiguous": false,
+      "gender": 3,
+      "number": 1,
+      "case": 2,
+      "case_str": "OBJECTIVE",
+      "person": -1,
+      "tense": 0
+    },
+    {
+      "id": 2,
+      "word": "Regiment",
+      "lemma": "regiment",
+      "pos": "NOUN",
+      "dep": "ROOT",
+      "node_type": 0,
+      "node_type_str": "NOUN",
+      "okm_notation": "Regiment(3,1,2)",
+      "ambiguous": false,
+      "gender": 3,
+      "number": 1,
+      "case": 2,
+      "case_str": "OBJECTIVE",
+      "person": -1,
+      "tense": 0
+    },
+    {
+      "id": 4,
+      "word": "near",
+      "lemma": "near",
+      "pos": "ADP",
+      "dep": "prep",
+      "node_type": 2,
+      "node_type_str": "DESCRIPTOR",
+      "okm_notation": "[d:near]",
+      "ambiguous": false,
+      "gender": -1,
+      "number": -1,
+      "case": -1,
+      "person": -1,
+      "tense": 0
+    },
+    {
+      "id": 5,
+      "word": "Villa",
+      "lemma": "Villa",
+      "pos": "PROPN",
+      "dep": "compound",
+      "node_type": 0,
+      "node_type_str": "NOUN",
+      "okm_notation": "Villa(3,1,6)",
+      "ambiguous": false,
+      "gender": 3,
+      "number": 1,
+      "case": 6,
+      "case_str": "GENITIVE",
+      "person": -1,
+      "tense": 0
+    },
+    {
+      "id": 6,
+      "word": "Rogatti",
+      "lemma": "Rogatti",
+      "pos": "PROPN",
+      "dep": "pobj",
+      "node_type": 0,
+      "node_type_str": "NOUN",
+      "okm_notation": "Rogatti(3,1,7)",
+      "ambiguous": false,
+      "gender": 3,
+      "number": 1,
+      "case": 7,
+      "case_str": "LOCATIVE",
+      "person": -1,
+      "tense": 0
+    }
+  ],
+  "edges": [
+    {
+      "source": 0,
+      "target": 1,
+      "dep": "punct",
+      "relation": "OBJECT_OF",
+      "case": 2,
+      "case_str": "OBJECTIVE",
+      "child_type": "NOUN",
+      "head_type": "NOUN"
+    },
+    {
+      "source": 2,
+      "target": 0,
+      "dep": "nmod",
+      "relation": "POSSESSES",
+      "case": 6,
+      "case_str": "GENITIVE",
+      "child_type": "NOUN",
+      "head_type": "NOUN"
+    },
+    {
+      "source": 2,
+      "target": 4,
+      "dep": "prep",
+      "relation": "PREP",
+      "case": -1,
+      "case_str": "NONE",
+      "child_type": "DESCRIPTOR",
+      "head_type": "NOUN"
+    },
+    {
+      "source": 4,
+      "target": 6,
+      "dep": "pobj",
+      "relation": "LOCATED_AT",
+      "case": 7,
+      "case_str": "LOCATIVE",
+      "child_type": "NOUN",
+      "head_type": "DESCRIPTOR"
+    },
+    {
+      "source": 6,
+      "target": 5,
+      "dep": "compound",
+      "relation": "POSSESSES",
+      "case": 6,
+      "case_str": "GENITIVE",
+      "child_type": "NOUN",
+      "head_type": "NOUN"
+    }
+  ],
+  "meta": {
+    "okm_version": "1.0",
+    "sentence": "Panzergrenadier _ Regiment ) near Villa Rogatti ."
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "word": "Well",
+      "lemma": "well",
+      "pos": "INTJ",
+      "dep": "intj",
+      "node_type": 2,
+      "node_type_str": "DESCRIPTOR",
+      "okm_notation": "[d:Well]",
+      "ambiguous": true,
+      "gender": -1,
+      "number": -1,
+      "case": -1,
+      "person": -1,
+      "tense": 0
+    },
+    {
+      "id": 2,
+      "word": "maybe",
+      "lemma": "maybe",
+      "pos": "ADV",
+      "dep": "advmod",
+      "node_type": 2,
+      "node_type_str": "DESCRIPTOR",
+      "okm_notation": "[d:maybe]",
+      "ambiguous": false,
+      "gender": -1,
+      "number": -1,
+      "case": -1,
+      "person": -1,
+      "tense": 0
+    },
+    {
+      "id": 3,
+      "word": "not",
+      "lemma": "not",
+      "pos": "PART",
+      "dep": "ROOT",
+      "node_type": 2,
+      "node_type_str": "DESCRIPTOR",
+      "okm_notation": "[d:not]",
+      "ambiguous": false,
+      "gender": -1,
+      "number": -1,
+      "case": -1,
+      "person": -1,
+      "tense": 0
+    }
+  ],
+  "edges": [
+    {
+      "source": 3,
+      "target": 0,
+      "dep": "intj",
+      "relation": "INTJ",
+      "case": -1,
+      "case_str": "NONE",
+      "child_type": "DESCRIPTOR",
+      "head_type": "DESCRIPTOR"
+    },
+    {
+      "source": 3,
+      "target": 2,
+      "dep": "advmod",
+      "relation": "ADVMOD",
+      "case": -1,
+      "case_str": "NONE",
+      "child_type": "DESCRIPTOR",
+      "head_type": "DESCRIPTOR"
+    }
+  ],
+  "meta": {
+    "okm_version": "1.0",
+    "sentence": "Well , maybe not ..."
+  }
+}

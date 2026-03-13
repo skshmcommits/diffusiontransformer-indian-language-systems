@@ -1,0 +1,163 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "word": "He",
+      "lemma": "he",
+      "pos": "PRON",
+      "dep": "nsubj",
+      "node_type": 0,
+      "node_type_str": "NOUN",
+      "okm_notation": "He(1,1,1)",
+      "ambiguous": false,
+      "gender": 1,
+      "number": 1,
+      "case": 1,
+      "case_str": "SUBJECTIVE",
+      "person": -1,
+      "tense": 0
+    },
+    {
+      "id": 1,
+      "word": "told",
+      "lemma": "tell",
+      "pos": "VERB",
+      "dep": "ROOT",
+      "node_type": 1,
+      "node_type_str": "VERB",
+      "okm_notation": "told(3,1,-1)",
+      "ambiguous": false,
+      "person": 3,
+      "v_number": 1,
+      "tense": -1,
+      "tense_str": "PAST",
+      "gender": -1,
+      "number": -1,
+      "case": -1
+    },
+    {
+      "id": 2,
+      "word": "Treasury",
+      "lemma": "Treasury",
+      "pos": "PROPN",
+      "dep": "compound",
+      "node_type": 0,
+      "node_type_str": "NOUN",
+      "okm_notation": "Treasury(3,1,6)",
+      "ambiguous": false,
+      "gender": 3,
+      "number": 1,
+      "case": 6,
+      "case_str": "GENITIVE",
+      "person": -1,
+      "tense": 0
+    },
+    {
+      "id": 3,
+      "word": "Secretary",
+      "lemma": "Secretary",
+      "pos": "PROPN",
+      "dep": "compound",
+      "node_type": 0,
+      "node_type_str": "NOUN",
+      "okm_notation": "Secretary(3,1,6)",
+      "ambiguous": false,
+      "gender": 3,
+      "number": 1,
+      "case": 6,
+      "case_str": "GENITIVE",
+      "person": -1,
+      "tense": 0
+    },
+    {
+      "id": 4,
+      "word": "John",
+      "lemma": "John",
+      "pos": "PROPN",
+      "dep": "compound",
+      "node_type": 0,
+      "node_type_str": "NOUN",
+      "okm_notation": "John(3,1,6)",
+      "ambiguous": false,
+      "gender": 3,
+      "number": 1,
+      "case": 6,
+      "case_str": "GENITIVE",
+      "person": -1,
+      "tense": 0
+    },
+    {
+      "id": 5,
+      "word": "C.",
+      "lemma": "C.",
+      "pos": "PROPN",
+      "dep": "dobj",
+      "node_type": 0,
+      "node_type_str": "NOUN",
+      "okm_notation": "C.(3,1,2)",
+      "ambiguous": false,
+      "gender": 3,
+      "number": 1,
+      "case": 2,
+      "case_str": "OBJECTIVE",
+      "person": -1,
+      "tense": 0
+    }
+  ],
+  "edges": [
+    {
+      "source": 1,
+      "target": 0,
+      "dep": "nsubj",
+      "relation": "SUBJECT_OF",
+      "case": 1,
+      "case_str": "SUBJECTIVE",
+      "child_type": "NOUN",
+      "head_type": "VERB"
+    },
+    {
+      "source": 1,
+      "target": 5,
+      "dep": "dobj",
+      "relation": "OBJECT_OF",
+      "case": 2,
+      "case_str": "OBJECTIVE",
+      "child_type": "NOUN",
+      "head_type": "VERB"
+    },
+    {
+      "source": 3,
+      "target": 2,
+      "dep": "compound",
+      "relation": "POSSESSES",
+      "case": 6,
+      "case_str": "GENITIVE",
+      "child_type": "NOUN",
+      "head_type": "NOUN"
+    },
+    {
+      "source": 5,
+      "target": 3,
+      "dep": "compound",
+      "relation": "POSSESSES",
+      "case": 6,
+      "case_str": "GENITIVE",
+      "child_type": "NOUN",
+      "head_type": "NOUN"
+    },
+    {
+      "source": 5,
+      "target": 4,
+      "dep": "compound",
+      "relation": "POSSESSES",
+      "case": 6,
+      "case_str": "GENITIVE",
+      "child_type": "NOUN",
+      "head_type": "NOUN"
+    }
+  ],
+  "meta": {
+    "okm_version": "1.0",
+    "sentence": "He told Treasury Secretary John C."
+  }
+}

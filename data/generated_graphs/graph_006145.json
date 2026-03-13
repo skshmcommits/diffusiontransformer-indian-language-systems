@@ -1,0 +1,137 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "word": "Titled",
+      "lemma": "title",
+      "pos": "VERB",
+      "dep": "ROOT",
+      "node_type": 1,
+      "node_type_str": "VERB",
+      "okm_notation": "Titled(3,1,-1)",
+      "ambiguous": false,
+      "person": 3,
+      "v_number": 1,
+      "tense": -1,
+      "tense_str": "PAST",
+      "gender": -1,
+      "number": -1,
+      "case": -1
+    },
+    {
+      "id": 2,
+      "word": "Commando",
+      "lemma": "Commando",
+      "pos": "PROPN",
+      "dep": "compound",
+      "node_type": 0,
+      "node_type_str": "NOUN",
+      "okm_notation": "Commando(3,1,6)",
+      "ambiguous": false,
+      "gender": 3,
+      "number": 1,
+      "case": 6,
+      "case_str": "GENITIVE",
+      "person": -1,
+      "tense": 0
+    },
+    {
+      "id": 3,
+      "word": "Do",
+      "lemma": "do",
+      "pos": "VERB",
+      "dep": "ccomp",
+      "node_type": 1,
+      "node_type_str": "VERB",
+      "okm_notation": "Do(3,1,999)",
+      "ambiguous": false,
+      "person": 3,
+      "v_number": 1,
+      "tense": 0,
+      "tense_str": "PRESENT",
+      "gender": -1,
+      "number": -1,
+      "case": -1
+    },
+    {
+      "id": 4,
+      "word": "or",
+      "lemma": "or",
+      "pos": "CCONJ",
+      "dep": "cc",
+      "node_type": 2,
+      "node_type_str": "DESCRIPTOR",
+      "okm_notation": "[d:or]",
+      "ambiguous": false,
+      "gender": -1,
+      "number": -1,
+      "case": -1,
+      "person": -1,
+      "tense": 0
+    },
+    {
+      "id": 5,
+      "word": "Die",
+      "lemma": "die",
+      "pos": "VERB",
+      "dep": "conj",
+      "node_type": 1,
+      "node_type_str": "VERB",
+      "okm_notation": "Die(3,1,999)",
+      "ambiguous": false,
+      "person": 3,
+      "v_number": 1,
+      "tense": 0,
+      "tense_str": "PRESENT",
+      "gender": -1,
+      "number": -1,
+      "case": -1
+    }
+  ],
+  "edges": [
+    {
+      "source": 0,
+      "target": 3,
+      "dep": "ccomp",
+      "relation": "CCOMP",
+      "case": -1,
+      "case_str": "NONE",
+      "child_type": "VERB",
+      "head_type": "VERB"
+    },
+    {
+      "source": 3,
+      "target": 2,
+      "dep": "compound",
+      "relation": "POSSESSES",
+      "case": 6,
+      "case_str": "GENITIVE",
+      "child_type": "NOUN",
+      "head_type": "VERB"
+    },
+    {
+      "source": 3,
+      "target": 4,
+      "dep": "cc",
+      "relation": "CC",
+      "case": -1,
+      "case_str": "NONE",
+      "child_type": "DESCRIPTOR",
+      "head_type": "VERB"
+    },
+    {
+      "source": 3,
+      "target": 5,
+      "dep": "conj",
+      "relation": "CONJ",
+      "case": -1,
+      "case_str": "NONE",
+      "child_type": "VERB",
+      "head_type": "VERB"
+    }
+  ],
+  "meta": {
+    "okm_version": "1.0",
+    "sentence": "Titled \" Commando Do or Die !"
+  }
+}

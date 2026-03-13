@@ -1,0 +1,133 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "word": "But",
+      "lemma": "but",
+      "pos": "CCONJ",
+      "dep": "cc",
+      "node_type": 2,
+      "node_type_str": "DESCRIPTOR",
+      "okm_notation": "[d:But]",
+      "ambiguous": false,
+      "gender": -1,
+      "number": -1,
+      "case": -1,
+      "person": -1,
+      "tense": 0
+    },
+    {
+      "id": 1,
+      "word": "here",
+      "lemma": "here",
+      "pos": "ADV",
+      "dep": "advmod",
+      "node_type": 2,
+      "node_type_str": "DESCRIPTOR",
+      "okm_notation": "[d:here]",
+      "ambiguous": false,
+      "gender": -1,
+      "number": -1,
+      "case": -1,
+      "person": -1,
+      "tense": 0
+    },
+    {
+      "id": 3,
+      "word": "it",
+      "lemma": "it",
+      "pos": "PRON",
+      "dep": "nsubj",
+      "node_type": 0,
+      "node_type_str": "NOUN",
+      "okm_notation": "it(3,1,1)",
+      "ambiguous": false,
+      "gender": 3,
+      "number": 1,
+      "case": 1,
+      "case_str": "SUBJECTIVE",
+      "person": -1,
+      "tense": 0
+    },
+    {
+      "id": 4,
+      "word": "'s",
+      "lemma": "be",
+      "pos": "AUX",
+      "dep": "ROOT",
+      "node_type": 1,
+      "node_type_str": "VERB",
+      "okm_notation": "'s(3,1,999)",
+      "ambiguous": false,
+      "person": 3,
+      "v_number": 1,
+      "tense": 0,
+      "tense_str": "PRESENT",
+      "gender": -1,
+      "number": -1,
+      "case": -1
+    },
+    {
+      "id": 5,
+      "word": "different",
+      "lemma": "different",
+      "pos": "ADJ",
+      "dep": "acomp",
+      "node_type": 2,
+      "node_type_str": "DESCRIPTOR",
+      "okm_notation": "[d:different]",
+      "ambiguous": false,
+      "gender": -1,
+      "number": -1,
+      "case": -1,
+      "person": -1,
+      "tense": 0
+    }
+  ],
+  "edges": [
+    {
+      "source": 4,
+      "target": 0,
+      "dep": "cc",
+      "relation": "CC",
+      "case": -1,
+      "case_str": "NONE",
+      "child_type": "DESCRIPTOR",
+      "head_type": "VERB"
+    },
+    {
+      "source": 4,
+      "target": 1,
+      "dep": "advmod",
+      "relation": "ADVMOD",
+      "case": -1,
+      "case_str": "NONE",
+      "child_type": "DESCRIPTOR",
+      "head_type": "VERB"
+    },
+    {
+      "source": 4,
+      "target": 3,
+      "dep": "nsubj",
+      "relation": "SUBJECT_OF",
+      "case": 1,
+      "case_str": "SUBJECTIVE",
+      "child_type": "NOUN",
+      "head_type": "VERB"
+    },
+    {
+      "source": 4,
+      "target": 5,
+      "dep": "acomp",
+      "relation": "ACOMP",
+      "case": -1,
+      "case_str": "NONE",
+      "child_type": "DESCRIPTOR",
+      "head_type": "VERB"
+    }
+  ],
+  "meta": {
+    "okm_version": "1.0",
+    "sentence": "But here , it 's different ."
+  }
+}

@@ -1,0 +1,161 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "word": "The",
+      "lemma": "the",
+      "pos": "DET",
+      "dep": "det",
+      "node_type": 2,
+      "node_type_str": "DESCRIPTOR",
+      "okm_notation": "[d:The]",
+      "ambiguous": false,
+      "gender": -1,
+      "number": -1,
+      "case": -1,
+      "person": -1,
+      "tense": 0
+    },
+    {
+      "id": 1,
+      "word": "Teamsters",
+      "lemma": "Teamsters",
+      "pos": "PROPN",
+      "dep": "ROOT",
+      "node_type": 0,
+      "node_type_str": "NOUN",
+      "okm_notation": "Teamsters(3,3,2)",
+      "ambiguous": false,
+      "gender": 3,
+      "number": 3,
+      "case": 2,
+      "case_str": "OBJECTIVE",
+      "person": -1,
+      "tense": 0
+    },
+    {
+      "id": 3,
+      "word": "led",
+      "lemma": "lead",
+      "pos": "VERB",
+      "dep": "acl",
+      "node_type": 1,
+      "node_type_str": "VERB",
+      "okm_notation": "led(3,1,-1)",
+      "ambiguous": false,
+      "person": 3,
+      "v_number": 1,
+      "tense": -1,
+      "tense_str": "PAST",
+      "gender": -1,
+      "number": -1,
+      "case": -1
+    },
+    {
+      "id": 4,
+      "word": "by",
+      "lemma": "by",
+      "pos": "ADP",
+      "dep": "agent",
+      "node_type": 2,
+      "node_type_str": "DESCRIPTOR",
+      "okm_notation": "[d:by]",
+      "ambiguous": false,
+      "gender": -1,
+      "number": -1,
+      "case": -1,
+      "person": -1,
+      "tense": 0
+    },
+    {
+      "id": 5,
+      "word": "Mickey",
+      "lemma": "Mickey",
+      "pos": "PROPN",
+      "dep": "compound",
+      "node_type": 0,
+      "node_type_str": "NOUN",
+      "okm_notation": "Mickey(3,1,6)",
+      "ambiguous": false,
+      "gender": 3,
+      "number": 1,
+      "case": 6,
+      "case_str": "GENITIVE",
+      "person": -1,
+      "tense": 0
+    },
+    {
+      "id": 6,
+      "word": "J.",
+      "lemma": "J.",
+      "pos": "PROPN",
+      "dep": "pobj",
+      "node_type": 0,
+      "node_type_str": "NOUN",
+      "okm_notation": "J.(3,1,3)",
+      "ambiguous": false,
+      "gender": 3,
+      "number": 1,
+      "case": 3,
+      "case_str": "INSTRUMENTAL",
+      "person": -1,
+      "tense": 0
+    }
+  ],
+  "edges": [
+    {
+      "source": 1,
+      "target": 0,
+      "dep": "det",
+      "relation": "DET",
+      "case": -1,
+      "case_str": "NONE",
+      "child_type": "DESCRIPTOR",
+      "head_type": "NOUN"
+    },
+    {
+      "source": 1,
+      "target": 3,
+      "dep": "acl",
+      "relation": "ACL",
+      "case": -1,
+      "case_str": "NONE",
+      "child_type": "VERB",
+      "head_type": "NOUN"
+    },
+    {
+      "source": 3,
+      "target": 4,
+      "dep": "agent",
+      "relation": "AGENT",
+      "case": -1,
+      "case_str": "NONE",
+      "child_type": "DESCRIPTOR",
+      "head_type": "VERB"
+    },
+    {
+      "source": 4,
+      "target": 6,
+      "dep": "pobj",
+      "relation": "INSTRUMENT_OF",
+      "case": 3,
+      "case_str": "INSTRUMENTAL",
+      "child_type": "NOUN",
+      "head_type": "DESCRIPTOR"
+    },
+    {
+      "source": 6,
+      "target": 5,
+      "dep": "compound",
+      "relation": "POSSESSES",
+      "case": 6,
+      "case_str": "GENITIVE",
+      "child_type": "NOUN",
+      "head_type": "NOUN"
+    }
+  ],
+  "meta": {
+    "okm_version": "1.0",
+    "sentence": "The Teamsters , led by Mickey J."
+  }
+}

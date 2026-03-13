@@ -1,0 +1,161 @@
+OKM PIPELINE SESSION SUMMARY (SMOKE RUN -> END)
+Date: 2026-03-02
+Workspace: c:\Users\sharm\claudeproject
+
+====================================================================
+1) WHAT WE STARTED WITH
+====================================================================
+Goal for this phase:
+- Run a smoke training job.
+- Verify that checkpointed model can run inference end-to-end.
+- Confirm whether the model is currently usable.
+
+Known prior state before this phase:
+- Demo pipeline was already working end-to-end.
+- Imports/runtime issues had been fixed earlier.
+- Generated data was present under data/generated_graphs.
+
+
+====================================================================
+2) SMOKE TRAINING EXECUTION
+====================================================================
+Initial command attempted:
+- python -u main.py train --data_dir data/generated_graphs --epochs 1 --batch_size 2
+
+Result:
+- Failed because CLI does not accept --data_dir.
+- Correct CLI arg is --graphs_dir.
+
+Corrected command:
+- python -u main.py train --graphs_dir data/generated_graphs --epochs 1 --batch_size 2
+
+Observed behavior:
+- Loaded 10,000 graphs from data/generated_graphs.
+- Loaded vocabulary size: 14,831.
+- Used model size preset: small.
+- Trainer used CUDA device.
+- 1 epoch completed successfully (4250 steps).
+- Validation ran periodically and best checkpoint updated multiple times.
+
+Important metrics observed in logs:
+- Training started around total loss ~5.40 and generally trended down.
+- End of epoch average training loss: ~2.7392.
+- Validation loss improved across checks, reaching ~0.6363 by step 4000.
+
+Training artifacts produced:
+- checkpoints/best_model.pt
+- checkpoints/final_model.pt
+- checkpoints/ckpt_step_1000.pt
+- checkpoints/ckpt_step_2000.pt
+- checkpoints/ckpt_step_3000.pt
+- checkpoints/ckpt_step_4000.pt
+- checkpoints/training_log.jsonl
+- checkpoints/vocab.json
+
+
+====================================================================
+3) POST-TRAIN INFERENCE TEST (FIRST ATTEMPT)
+====================================================================
+Command:
+- python -u main.py infer --checkpoint checkpoints/best_model.pt --sentence "Ram went to school by bus."
+
+Result:
+- Failed with model state_dict mismatch.
+
+Root cause:
+- Inference loader (`inference.py` -> `from_checkpoint`) was constructing a default model config,
+  not the exact config saved during training.
+- Therefore layer counts/dimensions and vocab size did not match the checkpoint weights.
+
+
+====================================================================
+4) FIX APPLIED
+====================================================================
+File changed:
+- inference.py
+
+Change made:
+- Updated checkpoint loading flow to read `model_cfg` from checkpoint metadata first.
+- If `model_cfg` exists in checkpoint, reconstruct `ModelConfig(**ckpt_cfg)`.
+- Build model with that reconstructed config, then load `model_state`.
+
+Why this matters:
+- Guarantees architecture parity between training and inference.
+- Prevents shape mismatch errors when loading trained weights.
+
+
+====================================================================
+5) POST-FIX INFERENCE TEST (SECOND ATTEMPT)
+====================================================================
+Command rerun:
+- python -u main.py infer --checkpoint checkpoints/best_model.pt --sentence "Ram went to school by bus."
+
+Result:
+- Success.
+- Checkpoint loaded.
+- Inference engine initialized on CUDA.
+- Sentence encoder loaded.
+- Graph output generated and printed.
+
+Observed generated graph characteristics in this test:
+- 32 nodes, 0 edges.
+- Many placeholder-like tokens (`@-@`) and weak semantics.
+
+
+====================================================================
+6) IS THE MODEL WORKING RIGHT NOW?
+====================================================================
+Short answer:
+- YES for system functionality (training + checkpointing + inference pipeline).
+- NOT YET good for output quality/semantic correctness.
+
+Expanded status:
+
+A) What is working:
+- Data loading from generated graph dataset works.
+- Training loop runs on GPU without crashing.
+- Validation and checkpoint saving work.
+- Checkpoint can now be loaded for inference.
+- Inference execution completes and returns a graph object.
+
+B) What is not yet satisfactory:
+- Generated graph quality is currently low (example had no edges and weak lexical quality).
+- Output suggests model is still under-trained for meaningful graph generation.
+
+C) Why this is expected right now:
+- This was a smoke run (1 epoch) designed to validate plumbing, not final performance.
+- Diffusion graph generation typically needs more training time and tuning.
+
+D) Practical conclusion:
+- The model stack is operational.
+- The current checkpoint is a valid technical checkpoint, not a production-quality one.
+
+
+====================================================================
+7) RECOMMENDED NEXT STEPS
+====================================================================
+1. Train longer:
+   - Start with 10-30 epochs using the same dataset and monitor val loss and sample quality.
+
+2. Sample periodically during training:
+   - Run inference every N checkpoints on a fixed sentence set and compare graph structure quality.
+
+3. Compare checkpoints:
+   - Evaluate best_model.pt vs final_model.pt on the same prompts.
+
+4. If quality remains poor:
+   - Tune CFG scale and sampling steps during inference.
+   - Consider model_size=medium if GPU budget allows.
+   - Review data quality distribution (edge density, node type balance, vocab noise).
+
+
+====================================================================
+8) FINAL TAKEAWAY
+====================================================================
+Today’s smoke-to-end phase was successful from an engineering perspective:
+- Training works.
+- Checkpoints are produced.
+- Inference path works after a targeted checkpoint-config fix.
+
+But model quality is not yet where it should be:
+- Current model behavior indicates early-stage learning, not final semantic graph generation.
